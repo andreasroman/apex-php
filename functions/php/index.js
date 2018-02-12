@@ -7,11 +7,6 @@ module.exports.handle = (event, context, callback) => {
     var response = '';
     var php = './php';
 
-    // When using 'serverless invoke local' use the system PHP binary instead
-    if (typeof process.env.PWD !== "undefined") {
-        php = 'php';
-    }
-
     // Build the context object data
     var contextData = {};
     Object.keys(context).forEach(function (key) {
